@@ -1,0 +1,44 @@
+#include <FastLED.h>
+#include <esp_sleep.h>
+//#include "display/display.h"
+#include "wifi_conn/wifi_conn.h"
+//LEDS
+
+void setup() {
+    Serial.begin(115200);
+    Serial.println("STARTING");
+    //switch
+    
+    //pinMode(SWITCH_PIN, INPUT_PULLUP);
+
+    /*
+    if (digitalRead(SWITCH_PIN) == LOW) {
+        leds_toggle = true;
+    }
+    initLeds();
+    delay(100);
+    */
+    //initDisplay();
+    
+    //esp_sleep_enable_ext0_wakeup((gpio_num_t)SWITCH_PIN, 0);
+    setup_wifi_connection();
+}
+
+void loop() {
+
+    /*
+    EVERY_N_MILLISECONDS(10) {
+        check_switch_state();
+    }
+        */
+    EVERY_N_SECONDS(5) {
+        wifi_connection();
+    }
+    // drawImage();
+
+    // wifi connection
+    server.handleClient();
+    
+    
+    delay(30);
+}
