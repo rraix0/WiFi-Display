@@ -61,3 +61,31 @@ int measureTextWidth(String text) {
     tft.getTextBounds(text.c_str(), 0, 0, &x1, &y1, &w, &h);
     return w;
 }
+
+void drawThickLine(int x1, int y1, int x2, int y2, int thickness, uint16_t color) {
+    if (thickness <= 1) {
+        tft.drawLine(x1, y1, x2, y2, color);
+        return;
+    }
+
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    float len = sqrtf(dx * dx + dy * dy);
+
+    if (len == 0) {
+        tft.fillCircle(x1, y1, thickness / 2, color);
+        return;
+    }
+
+    float h = thickness / 2.0f;
+    float px = -dy / len * h;
+    float py =  dx / len * h;
+
+    int ax = lroundf(x1 + px), ay = lroundf(y1 + py);
+    int bx = lroundf(x1 - px), by = lroundf(y1 - py);
+    int cx = lroundf(x2 + px), cy = lroundf(y2 + py);
+    int ex = lroundf(x2 - px), ey = lroundf(y2 - py);
+
+    tft.fillTriangle(ax, ay, bx, by, cx, cy, color);
+    tft.fillTriangle(bx, by, ex, ey, cx, cy, color);
+}

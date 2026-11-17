@@ -11,3 +11,4 @@ int getIntArg(String name, int defaultValue = 0);
 void sendBadRequest(const char* message);
 void sendOK();
 int measureTextWidth(String text);
+void drawThickLine(int x1, int y1, int x2, int y2, int thickness, uint16_t color);

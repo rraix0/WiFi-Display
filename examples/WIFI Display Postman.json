@@ -1,0 +1,899 @@
+{
+  "info": {
+    "name": "WIFI Display",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Image upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/upload",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "upload"
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "on"
+            },
+            {
+              "key": "data",
+              "value": "abc"
+            },
+            {
+              "key": "title",
+              "value": "title"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "w",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "128"
+            },
+            {
+              "key": "h",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "160"
+            },
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            },
+            {
+              "key": "file",
+              "disabled": false,
+              "type": "file",
+              "description": "",
+              "src": "/home/raix/Downloads/TRASH/obraz123.raw"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Image upload 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/upload",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "upload"
+          ],
+          "query": [
+            {
+              "key": "state",
+              "value": "on"
+            },
+            {
+              "key": "data",
+              "value": "abc"
+            },
+            {
+              "key": "title",
+              "value": "title"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "w",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "128"
+            },
+            {
+              "key": "h",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "160"
+            },
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            },
+            {
+              "key": "file",
+              "disabled": false,
+              "type": "file",
+              "description": "",
+              "src": "/home/raix/Downloads/TRASH/obraz1234.raw"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Clear screen - color",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/clear",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "clear"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "bbffbb"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rect",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/rect",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "rect"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "14"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "10"
+            },
+            {
+              "key": "w",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "100"
+            },
+            {
+              "key": "h",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "38"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "FF0000"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "3"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Rect 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/rect",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "rect"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "87"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "55"
+            },
+            {
+              "key": "w",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "40"
+            },
+            {
+              "key": "h",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "40"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "ff0000"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "3"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Text",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/text",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "text"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "30"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "20"
+            },
+            {
+              "key": "data",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "shapes"
+            },
+            {
+              "key": "size",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0000FF"
+            },
+            {
+              "key": "wrap",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Circle",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/circle",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "circle"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "21"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "75"
+            },
+            {
+              "key": "r",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "20"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "00ff00"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Circle 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/circle",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "circle"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "64"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "75"
+            },
+            {
+              "key": "r",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "20"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "00ccff"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Line",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/line",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "line"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "10"
+            },
+            {
+              "key": "y1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "100"
+            },
+            {
+              "key": "x2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "118"
+            },
+            {
+              "key": "y2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "100"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "000000"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Line 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/line",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "line"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "100"
+            },
+            {
+              "key": "y1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "110"
+            },
+            {
+              "key": "x2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "122"
+            },
+            {
+              "key": "y2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "150"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "000000"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Triangle",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/triangle",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "triangle"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "5"
+            },
+            {
+              "key": "y1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "150"
+            },
+            {
+              "key": "x2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "40"
+            },
+            {
+              "key": "y2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "145"
+            },
+            {
+              "key": "x3",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "20"
+            },
+            {
+              "key": "y3",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "110"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0000ff"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "2"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Triangle 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/triangle",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "triangle"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "50"
+            },
+            {
+              "key": "y1",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "150"
+            },
+            {
+              "key": "x2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "90"
+            },
+            {
+              "key": "y2",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "130"
+            },
+            {
+              "key": "x3",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "55"
+            },
+            {
+              "key": "y3",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "110"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "0000ff"
+            },
+            {
+              "key": "thickness",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "2"
+            },
+            {
+              "key": "fill",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pixel",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "{{url}}/pixel",
+          "protocol": "",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "pixel"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "x",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "10"
+            },
+            {
+              "key": "y",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "10"
+            },
+            {
+              "key": "color",
+              "disabled": false,
+              "type": "text",
+              "description": "",
+              "value": "FFFFFF"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "192.168.0.35",
+      "type": "default"
+    }
+  ]
+}

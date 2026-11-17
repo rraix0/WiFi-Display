@@ -22,9 +22,20 @@ void handleLineQuery() {
 
     int thickness = constrain(getIntArg("thickness", 1), 1, 20);
 
-    // Thicker lines: parallelly moved
+    bool mostlyHorizontal = abs(x2 - x1) >= abs(y2 - y1);
+
+    // Center the stack of lines on the requested coordinates
+    int start = -(thickness - 1) / 2;
+
     for (int i = 0; i < thickness; i++) {
-        tft.drawLine(x1 + i, y1, x2 + i, y2, color);
+        int o = start + i;
+        if (mostlyHorizontal) {
+            // offset vertically
+            tft.drawLine(x1, y1 + o, x2, y2 + o, color);
+        } else {
+            // offset horizontally
+            tft.drawLine(x1 + o, y1, x2 + o, y2, color);
+        }
     }
 
     sendOK();
@@ -131,17 +142,21 @@ void handleTriangleQuery() {
     } else {
         int thickness = constrain(getIntArg("thickness", 1), 1, 20);
 
-        for (int i = 0; i < thickness; i++) {
-            tft.drawLine(x1 + i, y1, x2 + i, y2, color);
-            tft.drawLine(x2 + i, y2, x3 + i, y3, color);
-            tft.drawLine(x3 + i, y3, x1 + i, y1, color);
+        drawThickLine(x1, y1, x2, y2, thickness, color);
+        drawThickLine(x2, y2, x3, y3, thickness, color);
+        drawThickLine(x3, y3, x1, y1, thickness, color);
+
+        // Fill the notches at the corners so joins look clean
+        if (thickness > 1) {
+            int cr = thickness / 2;
+            tft.fillCircle(x1, y1, cr, color);
+            tft.fillCircle(x2, y2, cr, color);
+            tft.fillCircle(x3, y3, cr, color);
         }
     }
 
     sendOK();
 }
-
-
 
 void handlePixelQuery() {
     enableDisplay(true);
@@ -181,17 +196,32 @@ void handleTextQuery() {
         server.hasArg("color") ? server.arg("color") : "FFFFFF"
     );
 
-    tft.setTextSize(size);
+    //tft.setTextSize(size);
+    int lineHeight;
+
+    if (size == 1) {
+        tft.setFont(&FreeSans9pt7b);
+        lineHeight = 13;
+    } else if (size == 2) {
+        tft.setFont(&FreeSans12pt7b);
+        lineHeight = 18;
+    } else if (size == 3) {
+        tft.setFont(&FreeSans18pt7b);
+        lineHeight = 26;
+    }
+
     tft.setTextColor(color);
     tft.setTextWrap(false);
 
-    int lineHeight = 8 * size + 2;
+    
     int maxWidth = tft.width() - x;
 
     if (maxWidth <= 0) {
         sendBadRequest("X is outside the screen");
         return;
     }
+
+    y = y + lineHeight;
 
     // Without wrap: all text in one row.
     if (!getBoolArg("wrap", true)) {
@@ -224,7 +254,7 @@ void handleTextQuery() {
             tft.setCursor(x, y);
             tft.print(line);
 
-            y += lineHeight;
+            y += lineHeight + 3;
             line = word;
         } else {
             line = candidate;
@@ -249,6 +279,11 @@ void handleClearQuery() {
 
     tft.fillScreen(color);
 
-    enableDisplay(false);
+    if (color == 000000) {
+        enableDisplay(false);
+    } else {
+        enableDisplay(true);
+    }
+    
     sendOK();
 }

@@ -3,6 +3,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include <FastLED.h>
+#include <config/config.h>
 #include "esp_wifi.h"
 #include "esp_sleep.h"
 #include "handlers/handlers.h"

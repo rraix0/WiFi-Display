@@ -3,19 +3,19 @@
 #include <cstring>
 #include "../display/display.h"
 
-const char *wifi_ssid = "";
-const char *wifi_password = "";
+const char *wifi_ssid = WIFI_SSID;
+const char *wifi_password = WIFI_PASSWORD;
 
-IPAddress local_IP(192, 168, 0, 35);
-IPAddress gateway(192, 168, 0, 1);
-IPAddress subnet(255, 255, 255, 0);
-IPAddress primaryDNS(1, 1, 1, 1);
-IPAddress secondaryDNS(1, 0, 0, 1);
+WebServer server(HTTP_SERVER_PORT);
 
-WebServer server(80);
+IPAddress local_IP(WIFI_LOCAL_IP);
+IPAddress gateway(WIFI_GATEWAY);
+IPAddress subnet(WIFI_SUBNET);
+IPAddress primaryDNS(WIFI_PRIMARY_DNS);
+IPAddress secondaryDNS(WIFI_SECONDARY_DNS);
 
-constexpr int WIDTH = 128;
-constexpr int HEIGHT = 160;
+constexpr int WIDTH = DISPLAY_WIDTH;
+constexpr int HEIGHT = DISPLAY_HEIGHT;
 int IMG_WIDTH = 128;
 int IMG_HEIGHT = 160;
 int POS_X = 0;
