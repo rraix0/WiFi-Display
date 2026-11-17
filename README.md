@@ -19,6 +19,7 @@ Controll your TFT display over HTTP requests from any place of your house!
 - [Features](#features)
 - [How it works](#how-it-works)
 - [Build](#build)
+- [How to flash board](#flash-board)
 - [Configuration](#configuration)
 - [API](#API)
   - [Endpoints](#endpoints)
@@ -103,6 +104,28 @@ check out the `config/config.h` file
 // Potentiometer pin - brightness
 #define POT_PIN  0  //GPIO0
 ```
+
+### Flash board
+
+1. **Install the PlatformIO IDE extension** (`pioarduino IDE`) in Visual Studio Code.
+
+2. **Open your project** in VS Code.
+
+   <p align="center">
+     <img src="./assets/flash_board_1.png" alt="Opening the project" width="1000px">
+   </p>
+
+3. **Check the configuration.** Make sure all settings are correct and that `upload_port` points to the port connected to your board.
+
+   <p align="center">
+     <img src="./assets/flash_board_2.png" alt="PlatformIO configuration" width="1000px">
+   </p>
+
+4. **Flash your board** using the Upload command.
+
+   <p align="center">
+     <img src="./assets/flash_board_3.png" alt="Flashing the board" width="371px">
+   </p>
 
 ## API
 
