@@ -2,12 +2,14 @@
 
 ### A small ESP32-C2 project that exposes an HTTP API for drawing on an ST7735-compatible TFT display over Wi-Fi.
 
-<img src="assets/preview4.jpg" alt="Preview of the display 4" width="47%">
-<img src="assets/preview5.jpg" alt="Preview of the display 5" width="50%">
-<br>
-<img src="assets/preview1.jpg" alt="Preview of the display 1" width="33%">
-<img src="assets/preview2.jpg" alt="Preview of the display 2" width="33%">
-<img src="assets/preview3.jpg" alt="Preview of the display 3" width="33%">
+<div align="center">
+  <img src="assets/preview4.jpg" alt="Preview 4" width="49%">
+  <img src="assets/preview5.jpg" alt="Preview 5" width="49%">
+  <br><br>
+  <img src="assets/preview1.jpg" alt="Preview 1" width="32%">
+  <img src="assets/preview2.jpg" alt="Preview 2" width="32%">
+  <img src="assets/preview3.jpg" alt="Preview 3" width="32%">
+</div>
 
 
 Controll your TFT display over HTTP requests from any place of your house!
